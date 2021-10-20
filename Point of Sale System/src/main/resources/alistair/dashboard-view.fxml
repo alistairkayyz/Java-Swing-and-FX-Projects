@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<TitledPane animated="false" collapsible="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="1159.0" text="Dashboard" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="alistair.controllers.DashboardController">
+   <font>
+      <Font name="System Bold" size="27.0" />
+   </font>
+   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="507.0" prefWidth="1013.0" style="-fx-background-color: #e5ecff;">
+      <Button layoutX="1051.0" layoutY="463.0" mnemonicParsing="false" onAction="#close" prefHeight="30.0" prefWidth="80.0" styleClass="btn-dark" stylesheets="@../styles/main.css" text="Logout">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="20.0" layoutY="4.0" text="Sales Report">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="20.0" layoutY="49.0" mnemonicParsing="false" onAction="#allSales" prefHeight="30.0" prefWidth="155.0" styleClass="btn-process" stylesheets="@../styles/main.css" text="All Sales" />
+      <ScrollPane fx:id="scrollPane" layoutX="20.0" layoutY="86.0" prefHeight="367.0" prefWidth="783.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="700.0" prefWidth="781.0">
+               <children>
+                  <TableView prefHeight="365.0" prefWidth="781.0" styleClass="table-column" stylesheets="@../styles/main.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn prefWidth="44.0" text="ID" />
+                      <TableColumn prefWidth="86.0" text="Date" />
+                        <TableColumn prefWidth="250.0" text="Product Name" />
+                        <TableColumn minWidth="0.0" prefWidth="65.0" text="Category" />
+                        <TableColumn prefWidth="38.0" text="QTY" />
+                        <TableColumn prefWidth="83.0" text="Item Price" />
+                        <TableColumn prefWidth="94.0" text="Total Amount" />
+                        <TableColumn prefWidth="120.0" text="Staff Name" />
+                    </columns>
+                  </TableView>
+                  <ListView fx:id="idList" layoutY="29.0" prefHeight="680.0" prefWidth="45.0" />
+                  <ListView fx:id="dateList" layoutX="44.0" layoutY="29.0" prefHeight="680.0" prefWidth="87.0" />
+                  <ListView fx:id="productNameList" layoutX="130.0" layoutY="29.0" prefHeight="680.0" prefWidth="251.0" />
+                  <ListView fx:id="categoryList" layoutX="380.0" layoutY="29.0" prefHeight="680.0" prefWidth="66.0" />
+                  <ListView fx:id="quantityList" layoutX="445.0" layoutY="29.0" prefHeight="680.0" prefWidth="39.0" />
+                  <ListView fx:id="itemPriceList" layoutX="483.0" layoutY="29.0" prefHeight="680.0" prefWidth="84.0" />
+                  <ListView fx:id="totalAmountList" layoutX="566.0" layoutY="29.0" prefHeight="680.0" prefWidth="95.0" />
+                  <ListView fx:id="staffNameList" layoutX="660.0" layoutY="29.0" prefHeight="680.0" prefWidth="120.0" />
+               </children></AnchorPane>
+        </content>
+      </ScrollPane>
+      <AnchorPane layoutX="809.0" layoutY="86.0" prefHeight="213.0" prefWidth="322.0" style="-fx-background-color: white; -fx-border-radius: 10px;">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" styleClass="custom-date-heading" stylesheets="@../styles/main.css" text="Custom Date">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="fromDate" layoutX="75.0" layoutY="53.0" prefHeight="38.0" prefWidth="230.0" promptText="Choose date" />
+            <Label layoutX="14.0" layoutY="62.0" text="From:" textFill="#334586">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="toDate" layoutX="75.0" layoutY="111.0" prefHeight="38.0" prefWidth="230.0" promptText="Choose date" />
+            <Label layoutX="14.0" layoutY="120.0" text="To:" textFill="#334586">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Button layoutX="75.0" layoutY="163.0" mnemonicParsing="false" onAction="#showCustomSales" prefHeight="30.0" prefWidth="153.0" styleClass="btn-process" stylesheets="@../styles/main.css" text="Show" />
+         </children>
+      </AnchorPane>
+      <Label fx:id="totalSales" alignment="CENTER" layoutX="449.0" layoutY="458.0" minHeight="40.0" minWidth="130.0" prefHeight="40.0" prefWidth="354.0" style="-fx-font-weight: bold; -fx-text-fill: black; -fx-padding: 2px 10px;" styleClass="myHeadingLabel" stylesheets="@../styles/main.css" text="Total Sales: 0" />
+      <Button layoutX="195.0" layoutY="49.0" mnemonicParsing="false" onAction="#daySales" prefHeight="30.0" prefWidth="155.0" styleClass="btn-process" stylesheets="@../styles/main.css" text="Today's Sales" />
+   </AnchorPane>
+</TitledPane>

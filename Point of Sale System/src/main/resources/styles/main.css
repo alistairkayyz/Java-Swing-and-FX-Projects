@@ -1,0 +1,63 @@
+/*:root{
+    --primary: #169bd6;
+    --secondary: #334586;
+    --lightgray: #d2d5df;
+    --white: #f5f8fc;
+    --dark: #1e212a;
+}*/
+.anchorPane{
+    -fx-background-color: #334586;
+}
+
+.btn-dark{
+    -fx-background-color: #1e212a;
+    -fx-text-fill: #d3f0ff;
+}
+.btn-action{
+    -fx-font-weight: 600;
+    -fx-font-size: 14px;
+    -fx-background-color: #334586;
+    -fx-text-fill: #d3f0ff;
+}
+.btn-process{
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-background-color: #169bd6;
+    -fx-text-fill: #d3f0ff;
+}
+.lbl-action{
+    -fx-font-weight: 600;
+    -fx-font-size: 14px;
+    -fx-background-color: #334586;
+    -fx-text-fill: #d3f0ff;
+    -fx-padding: 10px 5px 10px 15px;
+}
+.lbl-heading-action{
+    -fx-font-weight: 600;
+    -fx-font-size: 14px;
+    -fx-background-color: #4860b9;
+    -fx-text-fill: #d3f0ff;
+    -fx-padding: 10px 5px 10px 15px;
+}
+.text-field-light{
+    -fx-background-color: #f5f8fc;
+    -fx-text-fill: #1e212a;
+}
+.table-view .table-column{
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #f5f8fc;
+}
+.myHeadingLabel{
+    -fx-font-size: 16px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #67696c;
+    -fx-label-padding: 5px 10px;
+    -fx-border-style: solid;
+    -fx-border-width: 2px;
+}
+.custom-date-heading{
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #67696c;
+}
